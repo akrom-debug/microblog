@@ -1,0 +1,48 @@
+   19  git init
+   20  git config --global user.name "akrom-debub"
+   21  git config --global user.email "kromahamra64@gmail.com"
+   22  git config --global init.defaultBranch main
+   23  git config --global credential.helper store
+   24  git remote add origin https://github.com/<your-akrom-debug>/microblog.git
+   25  git remote add origin https://github.com/<akrom-debug>/microblog.git
+   26  git remote add origin https://github.com/akrom-debug/microblog.git
+   28  touch .gitignore
+   29  git add README.md
+   30  git commit -m "Initial commit"
+   31  git push origin main
+   32  git branch
+   33  git branch -m master main
+   34  git push origin main
+   68  git add .
+   70  git init
+   72  git add .
+   73  git commit -m
+   74  git commit -m "chapter1"
+   75  git push origin main
+   77  git config --global user.name "akrom-debub"
+   78  git config --global user.email "kromahamra64@gmail.com"
+   79  git config --global init.defaultBranch main
+   80  git config --global credential.helper store
+   81  git add '
+   82  git add .
+   83  git commit -m "chapter1"
+   84  git status
+   85  git push origin main
+   86  git remote remove origin
+   87  git remote add origin https://github.com/akrom-debug/microblog
+   88  git push origin main
+   89  git remote remove origin
+   90  git remote add origin https://github.com/akrom-debug/microblog.git
+   91  git push origin main
+   93  git branch
+   94  git fetch origin
+   95  git status
+   96  git add .
+   97  git commit -m "chapter 1"
+   98  git push origin main
+   99  git pull origin main --rebase
+  100  git push origin main
+  101  git add .
+  102  git commit -m "chapter1"
+  112  touch .gitignore
+  124  history | grep git >> gitCommandstxt
