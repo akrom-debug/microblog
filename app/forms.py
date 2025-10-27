@@ -3,7 +3,7 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField, \
     TextAreaField #type: ignore
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, \
     Length
-import sqlalchemy as sa
+import sqlalchemy as sa #type: ignore
 from app import db
 from app.models import User
 
