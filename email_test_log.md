@@ -40,3 +40,12 @@
 - Message Recipients: ['DWatson@hcc-nd.edu', 'akromah@hcc-nd.edu']
 - Message Sender: cs210microblog@gmail.com
 -  Email sent successfully.
+
+## Email Test — 2025-10-29 15:37:10
+- MAIL_USERNAME: cs210microblog@gmail.com
+- MAIL_PASSWORD:  Loaded
+- MAIL_DEFAULT_SENDER: cs210microblog@gmail.com
+- Message Subject: Test Email from Flask
+- Message Recipients: ['DWatson@hcc-nd.edu', 'akromah@hcc-nd.edu']
+- Message Sender: cs210microblog@gmail.com
+-  Email sent successfully.
