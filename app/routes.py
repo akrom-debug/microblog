@@ -1,9 +1,9 @@
 from datetime import datetime, timezone
 from urllib.parse import urlsplit
-from flask import render_template, flash, redirect, url_for, request, g #type: ignore
-from flask_login import login_user, logout_user, current_user, login_required #type: ignore
-from flask_babel import _, get_locale #type: ignore
-import sqlalchemy as sa #type: ignore
+from flask import render_template, flash, redirect, url_for, request, g
+from flask_login import login_user, logout_user, current_user, login_required
+from flask_babel import _, get_locale
+import sqlalchemy as sa
 from app import app, db
 from app.forms import LoginForm, RegistrationForm, EditProfileForm, \
     EmptyForm, PostForm, ResetPasswordRequestForm, ResetPasswordForm
