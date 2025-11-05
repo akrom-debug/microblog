@@ -2,11 +2,11 @@ from datetime import datetime, timezone
 from hashlib import md5
 from time import time
 from typing import Optional
-import sqlalchemy as sa # type: ignore
-import sqlalchemy.orm as so # type: ignore
-from flask_login import UserMixin # type: ignore
-from werkzeug.security import generate_password_hash, check_password_hash # type: ignore
-import jwt # type: ignore
+import sqlalchemy as sa     #type: ignore
+import sqlalchemy.orm as so #type: ignore
+from flask_login import UserMixin #type: ignore
+from werkzeug.security import generate_password_hash, check_password_hash #type: ignore
+import jwt #type: ignore
 from app import app, db, login
 
 
@@ -119,6 +119,7 @@ class Post(db.Model):
         index=True, default=lambda: datetime.now(timezone.utc))
     user_id: so.Mapped[int] = so.mapped_column(sa.ForeignKey(User.id),
                                                index=True)
+    language: so.Mapped[Optional[str]] = so.mapped_column(sa.String(5))
 
     author: so.Mapped[User] = so.relationship(back_populates='posts')
 

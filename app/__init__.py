@@ -12,7 +12,8 @@ from config import Config
 
 
 def get_locale():
-    return request.accept_languages.best_match(app.config['LANGUAGES'])
+    # return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return 'es'
 
 
 app = Flask(__name__)
@@ -55,4 +56,4 @@ if not app.debug:
     app.logger.info('Microblog startup')
 
 
-from app import routes, models, errors
+from app import routes, models, errors, cli 
