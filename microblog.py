@@ -1,11 +1,10 @@
-import sqlalchemy as sa #type: ignore
-import sqlalchemy.orm as so #type: ignore
-from app import app, db
-from app import cli
-from app import translate
+import sqlalchemy as sa
+import sqlalchemy.orm as so
+from app import create_app, db
 from app.models import User, Post
 
-translate.register(app)
+app = create_app()
+
 
 @app.shell_context_processor
 def make_shell_context():
