@@ -1,10 +1,10 @@
 from datetime import datetime, timezone
 from flask import render_template, flash, redirect, url_for, request, g, \
     current_app
-from flask_login import current_user, login_required #type: ignore
-from flask_babel import _, get_locale #type: ignore
-import sqlalchemy as sa #type: ignore
-from langdetect import detect, LangDetectException #type: ignore
+from flask_login import current_user, login_required
+from flask_babel import _, get_locale
+import sqlalchemy as sa
+from langdetect import detect, LangDetectException
 from app import db
 from app.main.forms import EditProfileForm, EmptyForm, PostForm, SearchForm
 from app.models import User, Post
@@ -83,6 +83,14 @@ def user(username):
     form = EmptyForm()
     return render_template('user.html', user=user, posts=posts.items,
                            next_url=next_url, prev_url=prev_url, form=form)
+
+
+@bp.route('/user/<username>/popup')
+@login_required
+def user_popup(username):
+    user = db.first_or_404(sa.select(User).where(User.username == username))
+    form = EmptyForm()
+    return render_template('user_popup.html', user=user, form=form)
 
 
 @bp.route('/edit_profile', methods=['GET', 'POST'])
